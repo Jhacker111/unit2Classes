@@ -27,14 +27,15 @@ public class Car
     /**
      * Simulates driving and reduces fuel in the tank
      *
-     * @pre        specified distance cannot result in the consumption of more gas than is available
+     * @pre     specified distance cannot result in the consumption of more gas than is available
      * @param   distance distance that the car drives in miles
      */
     public void drive(double distance)
     {
         fuelInTank -= distance / fuelEfficiency;
     }
-    
+    
+
     /**
      * Returns the amount of gas in the cars tank in units of gallons
      * 
@@ -44,7 +45,8 @@ public class Car
     {
         return fuelInTank;
     }
-
+
+
     /**
      * 
      * @pre    gallonsOfGas must be a positive number
