@@ -44,5 +44,15 @@ public class VendingMachineTest
     public void tearDown()
     {
     }
+    @Test
+    public void getNumberTokens()
+    {
+        VendingMachine v1 = new VendingMachine();
+        assertEquals(0.0, v1.getNumberTokens(), 1e-6);
+        v1.tokenIn();
+        assertEquals(1.0,v1.getNumberTokens(),1e-6);
+        v1.tokenIn();
+        assertEquals(2.0,v1.getNumberTokens(),1e-6);
+    }
 
 }

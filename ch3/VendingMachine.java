@@ -22,7 +22,8 @@ public class VendingMachine
     /**
      * Simulates filling the machine
      * 
-     * @pre  Cannot be less than 1
+     * @pre   Cannot be less than 1
+     * @param number of sodas that are being filled
      */
     public void fillUp(int cans)
     {
@@ -40,11 +41,22 @@ public class VendingMachine
         this.numberTokens = this.numberTokens  + 1;
     }
     
+    /**
+     * Returns the number of sodas
+     * 
+     * @pre  numberSodas must be positive
+     * 
+     */
     public int getNumberSodas()
     {
         return this.numberSodas;
     }
     
+    /**
+     * 
+     * @pre  numberTokens must be positive
+     * 
+     */
     public int getNumberTokens()
     {
         return this.numberTokens;
