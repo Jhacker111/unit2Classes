@@ -1,11 +1,14 @@
 #BlueJ package file
+dependency1.from=CarTest
+dependency1.to=Car
+dependency1.type=UsesDependency
 objectbench.height=100
-objectbench.width=658
+objectbench.width=963
 package.editor.height=400
 package.editor.width=865
-package.editor.x=300
-package.editor.y=34
-package.numDependencies=0
+package.editor.x=781
+package.editor.y=432
+package.numDependencies=1
 package.numTargets=2
 package.showExtends=true
 package.showUses=true
