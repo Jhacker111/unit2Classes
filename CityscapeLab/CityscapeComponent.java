@@ -1,6 +1,7 @@
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import javax.swing.JComponent;
+import sys.in.Scanner;
 
 /**
  * Class that creates instances of the classes that comprise the cityscape and delegates drawing the
@@ -11,8 +12,14 @@ import javax.swing.JComponent;
  */
 public class CityscapeComponent extends JComponent
 {
-    // define the objects in your Cityscape as instance variables
+    public boolean isDay()
+    {
+        
+    private Sky sky = new Sky(0,000,800,300);
     
+    private Grass grass = new Grass(0,300,800,300);
+   
+    private Blimp blimp = new Blimp(100,50,150,75);    
     
     
     
@@ -30,13 +37,10 @@ public class CityscapeComponent extends JComponent
     {
         Graphics2D g2 = (Graphics2D) g;
         
-        Sky sky = new Sky(0,300,600,300);
         sky.draw(g2);
         
-        Grass grass = new Grass(0,600,600,300);
         grass.draw(g2);
         
-        Blimp blimp = new Blimp(100,450,100,50);
         blimp.draw(g2);
         
         Building building1 = new Building(50,50,50,250);
