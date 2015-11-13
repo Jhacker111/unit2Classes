@@ -18,6 +18,8 @@ public class Sky
     private int height;
     // defines the width
     private int width;
+    // defines the time of day
+    private boolean dn;
 
     /**
      * Constructor for objects of class Sky
@@ -26,12 +28,13 @@ public class Sky
      * @param height = how tall it is
      * @param width = how wide it is
      */
-    public Sky(int xvar, int yvar, int height, int width)
+    public Sky(int xvar, int yvar, int height, int width, boolean dn)
     {
         this.xvar = xvar;
         this.yvar = yvar;
         this.height = height;
         this.width = width;
+        this.dn = dn;
     }
 
     /**
@@ -40,9 +43,19 @@ public class Sky
      */
     public void draw(Graphics2D g2)
     {
-        Rectangle frame = new Rectangle(xvar,yvar,height,width);
-        g2.setPaint(Color.BLUE);
-        g2.draw(frame);
-        g2.fill(frame);
+        if (dn == true)
+        {
+            Rectangle frame = new Rectangle(xvar,yvar,height,width);
+            g2.setPaint(Color.BLUE);
+            g2.draw(frame);
+            g2.fill(frame);
+        }
+        else
+        {
+            Rectangle frame = new Rectangle(xvar,yvar,height,width);
+            g2.setPaint(Color.BLACK);
+            g2.draw(frame);
+            g2.fill(frame);
+        }
     }
 }
